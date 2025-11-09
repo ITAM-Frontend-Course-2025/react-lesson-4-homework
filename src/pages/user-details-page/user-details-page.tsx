@@ -1,10 +1,9 @@
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { getUserById } from '../../modules/users'
 import styles from './user-details-page.module.css'
 
 export function UserDetailsPage() {
   const { userId } = useParams()
-
   if (!userId) {
     return <div className={styles.placeholder}>Выберите студента, чтобы посмотреть подробности.</div>
   }
@@ -17,7 +16,12 @@ export function UserDetailsPage() {
 
   return (
     <article className={styles.card}>
-      <h3 className={styles.title}>{user.name}</h3>
+      <div className={styles.name_flex}>
+        <h3 className={styles.title}>{user.name}</h3>
+        <div>
+            {<Link to={`/users/${user.id}/profile`} className={styles.profileLink}>Перейти в профиль</Link>}
+        </div>
+      </div>
       <dl className={styles.list}>
         <div className={styles.row}>
           <dt>Статус:</dt>

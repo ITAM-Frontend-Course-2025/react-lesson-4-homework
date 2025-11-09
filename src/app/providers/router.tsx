@@ -6,6 +6,10 @@ import { NotFoundPage } from '../../pages/not-found-page'
 import { UserDetailsPage } from '../../pages/user-details-page'
 import { UsersPage } from '../../pages/users-page'
 import { UsersIntro } from '../../pages/users-page/users-intro'
+import { ProfilePage } from '../../pages/profile-page/profile-page'
+import { ProfileInfoPage } from '../../pages/profile-info-page/profile-info-page'
+import { ProfileHomeworksPage } from '../../pages/profile-homeworks-page/profile-homeworks-page'
+import { MessagePage } from '../../pages/message-page/message-page'
 
 export const appRouter = createBrowserRouter([
     {
@@ -34,6 +38,33 @@ export const appRouter = createBrowserRouter([
                         element: <UserDetailsPage />,
                     },
                 ],
+            },
+            {
+                path: 'users/:userId/profile',
+                element: <ProfilePage />,
+                children: [
+                    {
+                        index: true,
+                        element: <ProfileInfoPage />
+                    },
+                    {
+                        path: 'info',
+                        element: <ProfileInfoPage />
+                    },
+                    {
+                        path: 'homeworks',
+                        children: [ 
+                            {
+                                index: true,
+                                element: <ProfileHomeworksPage />
+                            },
+                            {
+                                path: 'message', 
+                                element: <MessagePage />
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 path: '*',

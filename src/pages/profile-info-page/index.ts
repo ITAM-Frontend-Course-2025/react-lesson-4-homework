@@ -1,0 +1,1 @@
+import { ProfileInfoPage } from "./profile-info-page";

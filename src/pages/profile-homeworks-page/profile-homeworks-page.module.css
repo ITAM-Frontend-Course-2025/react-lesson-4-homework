@@ -1,0 +1,33 @@
+.container{
+ margin-top: 20px;
+}
+.homework{
+ display: flex;
+ align-items: center;
+ gap: 20px;
+ border-bottom: 1px dashed rgba(148, 163, 184, 0.6);
+}
+.title{
+ margin: 0;
+ font-size: 1.25rem;
+ max-width: 150px;
+ width: 100%;
+}
+.description{
+ color: #475569;
+}
+.messageLink{
+ cursor: pointer;
+ padding: 10px;
+ border: none;
+ border-radius: 12px;
+ background: rgba(99, 102, 241, 0.08);
+ color: #3730a3;
+ font-weight: 600;
+ transition: transform 0.2s, background 0.2s;
+}
+.messageLink:hover{
+ transform: translateY(-2px);
+ background: rgba(79, 70, 229, 0.15);
+ text-decoration: underline;
+}
