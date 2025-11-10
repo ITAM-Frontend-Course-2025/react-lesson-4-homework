@@ -1,9 +1,12 @@
 import { Link, Outlet } from 'react-router-dom'
 import { PageSection } from '../../shared/ui/page-section'
-import { getUsers } from '../../modules/users'
 import styles from './users-page.module.css'
+import { useUsers } from '../../modules/users/hooks/user-hool'
+
 
 export function UsersPage() {
+
+  const { getUsers } = useUsers()
   const users = getUsers()
 
   return (

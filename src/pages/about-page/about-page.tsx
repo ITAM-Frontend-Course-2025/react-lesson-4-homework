@@ -4,7 +4,7 @@ import styles from './about-page.module.css'
 export function AboutPage() {
   return (
     <div className={styles.page}>
-      <PageSection title="О курсе">
+      <PageSection title="О курсе" description='лан сори'>
         <p>
           Перед вами учебный проект из домашнего задания. Задача — потренироваться в создании страниц,
           подключении маршрутизатора и работе с компонентами на TypeScript.
