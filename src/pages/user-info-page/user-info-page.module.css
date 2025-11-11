@@ -1,0 +1,7 @@
+.container{
+    width: 100%;
+    max-width: 40em;
+    border: 2px solid salmon;
+    padding: 20px;
+    margin: 20px auto;
+}
