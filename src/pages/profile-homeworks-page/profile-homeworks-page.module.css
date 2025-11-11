@@ -1,0 +1,70 @@
+.container{
+ margin-top: 20px;
+}
+.homework{
+ display: flex;
+ align-items: center;
+ gap: 20px;
+ border-bottom: 1px dashed rgba(148, 163, 184, 0.6);
+}
+.title{
+ margin: 0;
+ font-size: 1.25rem;
+ max-width: 150px;
+ width: 100%;
+}
+.description{
+ color: #475569;
+ max-width: auto;
+}
+button, .messageLink{
+ cursor: pointer;
+ padding: 10px;
+ border: none;
+ border-radius: 12px;
+ background: rgba(99, 102, 241, 0.08);
+ color: #3730a3;
+ font-weight: 600;
+ transition: transform 0.2s, background 0.2s;
+}
+button:hover, .messageLink:hover{
+ transform: translateY(-2px);
+ background: rgba(79, 70, 229, 0.15);
+ text-decoration: underline;
+}
+.edit{
+ border: none;
+ background-color: white;
+ padding: 0;
+ width: 30px;
+ height: 30px;
+}
+.editImg{
+ width: 30px;
+ height: 30px;
+ cursor: pointer;
+ transition: 0.2s;
+}
+.editImg:hover{
+ transform: translateY(-2px);
+}
+.inp{
+ margin: 16px 0;
+ display: flex;
+ gap: 10px;
+}
+textarea{
+ resize: none;
+ padding: 5px;
+ border: 1px solid #475569;
+ border-radius: 10px;
+ color: #475569;
+ font-size: 16px;
+ font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.buttons{
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ justify-content: space-around;
+}

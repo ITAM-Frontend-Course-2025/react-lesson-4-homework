@@ -1,0 +1,35 @@
+.card {
+ margin-top: 20px;
+ display: flex;
+ flex-direction: column;
+ gap: 16px;
+}
+
+.title {
+ margin: 0;
+ font-size: 1.25rem;
+}
+
+.list {
+ margin: 0;
+ display: grid;
+ gap: 12px;
+}
+
+.row {
+ display: flex;
+ justify-content: space-between;
+ gap: 12px;
+ padding-bottom: 8px;
+ border-bottom: 1px dashed rgba(148, 163, 184, 0.6);
+}
+
+.row dt {
+ font-weight: 600;
+ color: #1e293b;
+}
+
+.row dd {
+ margin: 0;
+ color: #475569;
+}

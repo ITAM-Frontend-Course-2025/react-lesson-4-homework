@@ -1,0 +1,1 @@
+import { ProfileHomeworksPage } from "./profile-homeworks-page";

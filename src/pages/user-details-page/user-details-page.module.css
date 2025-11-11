@@ -43,3 +43,24 @@
   font-size: 0.9rem;
 }
 
+.name_flex{
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.profileLink{
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(99, 102, 241, 0.08);
+  color: #3730a3;
+  font-weight: 600;
+  transition: transform 0.2s, background 0.2s;
+}
+.profileLink:hover {
+  transform: translateY(-2px);
+  background: rgba(79, 70, 229, 0.15);
+  text-decoration: underline;
+}
