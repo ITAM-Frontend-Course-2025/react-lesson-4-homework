@@ -1,5 +1,5 @@
 import styles from './message-page.module.css'
-import catSrc from '../../../public/cat.jpg'
+import catSrc from '/cat.jpg'
 
 export function MessagePage() {
  return (

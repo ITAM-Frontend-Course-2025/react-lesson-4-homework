@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import styles from './profile-info-page.module.css'
 
 export function ProfileInfoPage(){
-  const {users, getUsers, getUserById} = useUsersContext()
+  const {getUserById} = useUsersContext()
   const { userId } = useParams()
   if (userId) {
     const user = getUserById(userId)
