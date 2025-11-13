@@ -1,2 +1,2 @@
-export { getUserById, getUsers } from './api'
-export type { User } from './types'
+export { getUserById, getUsers, users } from './api'
+export type { User, UserId } from './types'

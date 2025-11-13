@@ -1,0 +1,25 @@
+.wrapper {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile {
+  display: flex;
+  gap: 12px;
+}
+
+.option {
+  padding: 10px;
+  border: 1px solid #475569;
+  border-radius: 20px;
+
+  &:hover {
+    transform: scale(1.02);
+    transition: 0.2s;
+  }
+}
+
+.optionLink {
+  &:hover { text-decoration: none; }
+}

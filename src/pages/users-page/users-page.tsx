@@ -16,7 +16,7 @@ export function UsersPage() {
         <div className={styles.grid}>
           <ul className={styles.list}>
             {users.map((user) => (
-              <li key={user.id}>
+              <li key={user.id} className={styles.item}>
                 <Link to={user.id} className={styles.link}>
                   <span className={styles.name}>{user.name}</span>
                   <span className={styles.role}>{user.role === 'mentor' ? 'Ментор' : 'Студент'}</span>

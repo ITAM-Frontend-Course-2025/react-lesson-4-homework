@@ -15,12 +15,13 @@
   }
 }
 
+
 .list {
   margin: 0;
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 12px;
+  gap: 24px;
 }
 
 .link {

@@ -6,6 +6,10 @@ import { NotFoundPage } from '../../pages/not-found-page'
 import { UserDetailsPage } from '../../pages/user-details-page'
 import { UsersPage } from '../../pages/users-page'
 import { UsersIntro } from '../../pages/users-page/users-intro'
+import { UserProfile } from '../../pages/user-details-page'
+import {
+    UserInfoPage
+} from '../../pages/user-details-page/user-profile/user-info/user-info.tsx'
 
 export const appRouter = createBrowserRouter([
     {
@@ -32,6 +36,22 @@ export const appRouter = createBrowserRouter([
                     {
                         path: ':userId',
                         element: <UserDetailsPage />,
+                        children: [
+                            {
+                                path: 'profile',
+                                element: <UserProfile />,
+                                children: [
+                                    {
+                                        path: 'info',
+                                        element: <UserInfoPage isInfo />,
+                                    },
+                                    {
+                                        path: 'homeworks',
+                                        element: <UserInfoPage />,
+                                    }
+                                ]
+                            }
+                        ]
                     },
                 ],
             },
