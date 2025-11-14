@@ -31,7 +31,7 @@ export const appRouter = createBrowserRouter([
                     },
                     {
                         path: ':userId',
-                        element: <UserDetailsPage />,
+                        element: <UserDetailsPage />
                     },
                 ],
             },
