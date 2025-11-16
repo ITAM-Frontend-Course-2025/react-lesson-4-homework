@@ -37,23 +37,8 @@
   color: #475569;
 }
 
-.profileLink {
-  border: 1px solid #3730a3;
-
-  border-radius: 18px;
-
-  padding: 16px;
-
-  background-color: rgba(99, 102, 241, 0.08);
-
-  color: #3730a3;
-  font-weight: 600;
-  text-align: center;
-
-  transition: transform 0.2s, background 0.2s;
+.note {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.9rem;
 }
-.profileLink:hover {  
-  transform: translateY(-2px);
-  background: rgba(79, 70, 229, 0.15);
-}
-
