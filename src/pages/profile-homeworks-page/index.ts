@@ -1,0 +1,1 @@
+export{ProfileHomeworks} from './profile-homeworks-page'

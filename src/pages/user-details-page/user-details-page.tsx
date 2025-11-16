@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom' // ← добавить Link
 import { getUserById } from '../../modules/users'
 import styles from './user-details-page.module.css'
 
@@ -17,7 +17,15 @@ export function UserDetailsPage() {
 
   return (
     <article className={styles.card}>
-      <h3 className={styles.title}>{user.name}</h3>
+      <div className={styles.header}>
+        <h3 className={styles.title}>{user.name}</h3>
+        <Link 
+          to={`/users/${user.id}/profile`} 
+          className={styles.profileButton}>
+          Профиль
+        </Link>
+      </div>
+      
       <dl className={styles.list}>
         <div className={styles.row}>
           <dt>Статус:</dt>
@@ -35,4 +43,3 @@ export function UserDetailsPage() {
     </article>
   )
 }
-
