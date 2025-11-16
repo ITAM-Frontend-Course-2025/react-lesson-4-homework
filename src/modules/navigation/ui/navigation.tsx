@@ -4,7 +4,7 @@ import styles from './navigation.module.css'
 const navItems = [
   { to: '/', label: 'Главная', end: true },
   { to: '/about', label: 'О курсе' },
-  { to: '/users', label: 'Список студентов' },
+  { to: '/users', label: 'Список пользователей' },
 ]
 
 export function Navigation() {

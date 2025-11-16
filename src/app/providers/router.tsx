@@ -1,11 +1,15 @@
-import { createBrowserRouter } from 'react-router-dom'
-import { RootLayout } from '../layouts/root-layout'
-import { AboutPage } from '../../pages/about-page'
-import { HomePage } from '../../pages/home'
-import { NotFoundPage } from '../../pages/not-found-page'
-import { UserDetailsPage } from '../../pages/user-details-page'
-import { UsersPage } from '../../pages/users-page'
-import { UsersIntro } from '../../pages/users-page/users-intro'
+import { createBrowserRouter } from 'react-router-dom';
+import { RootLayout } from '../layouts/root-layout';
+import { AboutPage } from '../../pages/about-page';
+import { HomePage } from '../../pages/home';
+import { NotFoundPage } from '../../pages/not-found-page';
+import { UserDetailsPage } from '../../pages/user-details-page';
+import { UsersPage } from '../../pages/users-page';
+import { UsersIntro } from '../../pages/users-page/users-intro';
+import { UserProfile } from '../../pages/user-profile';
+import { UserProfileIntro } from '../../pages/user-profile/user-profile-intro';
+import { UserInfo } from '../../pages/user-info';
+import { UserHomework } from '../../pages/user-homework';
 
 export const appRouter = createBrowserRouter([
     {
@@ -31,9 +35,27 @@ export const appRouter = createBrowserRouter([
                     },
                     {
                         path: ':userId',
-                        element: <UserDetailsPage />,
+                        element: <UserDetailsPage />
                     },
                 ],
+            },
+            {
+                path: 'users/:userId/profile',
+                element: <UserProfile />,
+                children: [
+                    {
+                        index: true,
+                        element: <UserProfileIntro />
+                    },
+                    {
+                        path: 'info',
+                        element: <UserInfo />
+                    },
+                    {
+                        path: 'homework',
+                        element: <UserHomework />
+                    }
+                ]
             },
             {
                 path: '*',

@@ -1,10 +1,10 @@
 import { Link, Outlet } from 'react-router-dom'
 import { PageSection } from '../../shared/ui/page-section'
-import { getUsers } from '../../modules/users'
+import { useUsersContext } from '../../modules/users'
 import styles from './users-page.module.css'
 
 export function UsersPage() {
-  const users = getUsers()
+  const { users } = useUsersContext();
 
   return (
     <div className={styles.page}>
