@@ -1,4 +1,4 @@
-import { NavLink, Outlet, useParams } from 'react-router-dom' // ← заменить Link на NavLink
+import { NavLink, Outlet, useParams } from 'react-router-dom'
 import { useUsers } from '../../modules/users/hooks/use-users-context'
 import { PageSection } from '../../shared/ui/page-section'
 import styles from './user-profile-page.module.css'

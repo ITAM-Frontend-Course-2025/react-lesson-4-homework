@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom' // ← добавить Link
+import { useParams, Link } from 'react-router-dom' 
 import { getUserById } from '../../modules/users'
 import styles from './user-details-page.module.css'
 
