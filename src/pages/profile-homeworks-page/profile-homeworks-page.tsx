@@ -7,9 +7,6 @@ export function ProfileHomeworks() {
   const { getUserById } = useUsers()
   const user = getUserById(userId!)
 
-  console.log('User:', user) // ← добавить для отладки
-  console.log('Homeworks:', user?.homeworks)
-
   if (!user) return <div>Пользователь не найден</div>
 
   if (!user.homeworks || user.homeworks.length === 0) {
