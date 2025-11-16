@@ -1,12 +1,12 @@
 import { NavLink } from 'react-router-dom'
-import styles from './profile-navigation.module.css'
+import styles from './extra-navigation.module.css';
 
 const navItems = [
   { to: '', label: 'Информация' },
   { to: 'homeworks', label: 'Домашние задания' },
 ]
 
-export function ProfileNavigation() {
+export function ExtraNavigation() {
   return (
   <nav className={styles.menu}>
     {navItems.map((item) => (
