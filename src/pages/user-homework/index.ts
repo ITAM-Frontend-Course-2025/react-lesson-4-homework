@@ -1,1 +1,1 @@
-import {HomeWorkPage} from './user-homework-page';
+export {HomeWorkPage} from './user-homework-page';

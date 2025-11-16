@@ -1,4 +1,4 @@
-import { UsersContext } from "../../modules/users/hooks/users-hooks";
+import { useUsersContext } from "../../modules/users/hooks/users-hooks";
 import { useParams } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
 import { useState } from "react";
@@ -12,35 +12,16 @@ type Homework = {
 let initialHomeworks: Homework[] = [
   {
     id: 1,
-    title: 'HTML',
-    description: 'Мы предлагаем вам сделать "визитку", в которой вы можете рассказать о себе. '
+    title: 'папапа',
+    description: 'па па па'
   },
-  {
-    id: 2,
-    title: 'CSS',
-    description: 'Вторая домашка будет связана с первой. Вы сделали свой сайт-визитку. Осталось её "раскрасить"!'
-  },
-  {
-    id: 3,
-    title: 'JS',
-    description: 'Практикуем алгоритмические задачи на JavaScript.'
-  },
-  {
-    id: 4,
-    title: 'TS',
-    description: 'Практикуем типизацию на TypeScript.'
-  },
-  {
-    id: 5,
-    title: 'Проекты',
-    description: 'Создаем собственный проект, используя все изученные темы.'
-  }
+  
 ];
 export function HomeWorkPage() {
   const [homeworks, setHomeworks] = useState<Homework[]>(initialHomeworks)
   const [editingHomeworkId, setEditingHomeworkId] = useState<number | null>(null)
   const [newDescription, setNewDescription] = useState('')
-  const {getUserById} = UsersContext()
+  const {getUserById} = useUsersContext()
   const { userId } = useParams()
   if (userId) {
     const user = getUserById(userId)

@@ -48,14 +48,14 @@ export const appRouter = createBrowserRouter([
                     },
                     {
                         path: 'info',
-                        element: <ProfilePage />
+                        element: <ProfileInfoPage/>
                     },
                     {
                         path: 'homeworks',
                         children: [ 
                             {
                                 index: true,
-                                element: <HomeWorkPage />
+                                element: <HomeWorkPage/>
                             },
                         ]
                     }

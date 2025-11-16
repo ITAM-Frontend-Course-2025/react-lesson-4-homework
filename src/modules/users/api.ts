@@ -21,15 +21,8 @@ export const users: User[] = [
         role: 'mentor',
         favouriteModule: 'TypeScript',
 
-    },
-    {
-        id: '4',
-        name: 'Татьяна',
-        role: 'mentor',
-        favouriteModule: 'TypeScript',
-    },
+    }
 ]
-
 /** Mock api request */
 export function getUsers(): User[] {
     return users

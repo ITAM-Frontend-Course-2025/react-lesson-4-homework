@@ -1,11 +1,11 @@
-import { createContext}from "react";
-import type {User,  UserId} from '../types'
+import { createContext } from "react";
+import type { User, UserId } from '../types'
 
-export type UserType = {
+export type UserContextType = {
     users: User[],
-    getUsers:()=>User[]
-    getUserById:(id: UserId)=>User | null,
-    
+    getUsers: () => User[],
+    getUserById: (id: UserId) => User | null,
 }
 
-export const UserType = createContext<UserType |undefined>(undefined)
+// Экспортируем константу контекста
+export const UsersContext = createContext<UserContextType | undefined>(undefined)

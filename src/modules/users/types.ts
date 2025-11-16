@@ -1,5 +1,5 @@
 export type User = {
-    id: string
+    id: UserId
     name: string
     role: 'student' | 'mentor'
     favouriteModule: string

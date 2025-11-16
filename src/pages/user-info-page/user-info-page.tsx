@@ -1,9 +1,9 @@
-import { UsersContext } from "../../modules/users/hooks/users-hooks";
+import { useUsersContext } from "../../modules/users/hooks/users-hooks";
 import { useParams } from 'react-router-dom';
 import styles from './user-info-page.module.css'
 
 export function ProfileInfoPage(){
-  const {getUserById} = UsersContext();
+  const {getUserById} = useUsersContext();
   const { userId } = useParams()
   if (userId) {
     const user = getUserById(userId)

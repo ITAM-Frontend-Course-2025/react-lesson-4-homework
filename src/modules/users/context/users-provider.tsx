@@ -1,12 +1,16 @@
 import type { ReactNode } from "react";
-import { UserType } from "./users-context";
-import {getUsers, getUserById} from '../api';
+import { UsersContext } from "./users-context"; // ← исправлен импорт
+import { getUsers, getUserById } from '../api';
+
 type UsersProviderProps = {
-    children:ReactNode
+    children: ReactNode
 }
-export function UsersProvider ({children} : UsersProviderProps){
-    const users =getUsers()
+
+export function UsersProvider({ children }: UsersProviderProps) {
+    const users = getUsers()
     return (
-        <UserType.Provider value={{users, getUsers, getUserById}}>{children}</UserType.Provider>
+        <UsersContext.Provider value={{ users, getUsers, getUserById }}>
+            {children}
+        </UsersContext.Provider>
     )
 };

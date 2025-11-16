@@ -1,1 +1,1 @@
-import { ProfileInfoPage } from "./user-info-page";
+export { ProfileInfoPage } from "./user-info-page";

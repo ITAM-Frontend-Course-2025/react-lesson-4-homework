@@ -1,9 +1,10 @@
-import {useContext} from "react";
-import { UserType } from "../context/users-context";
-export const UsersContext=()=>{
-    const context = useContext(UserType);
-    if (!context){
-        throw new Error('No no no mr. fish must be used within UserProvider');
+import { useContext } from "react";
+import { UsersContext } from "../context/users-context"; // ← исправлен импорт
+
+export const useUsersContext = () => { // ← переименован хук (use- префикс)
+    const context = useContext(UsersContext);
+    if (!context) {
+        throw new Error('useUsersContext must be used within UsersProvider');
     }
     return context;
 }
