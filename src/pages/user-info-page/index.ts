@@ -1,0 +1,1 @@
+export { ProfileInfoPage } from "./user-info-page";
