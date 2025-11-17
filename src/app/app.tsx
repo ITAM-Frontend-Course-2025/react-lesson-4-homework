@@ -1,6 +1,12 @@
 import { RouterProvider } from 'react-router-dom'
 import { appRouter } from './providers/router'
+import { UsersProvider } from '../modules/users/context/users-provider'
 
 export function App() {
-    return <RouterProvider router={appRouter} />
+    return (
+    <UsersProvider>
+        <RouterProvider router={appRouter} />
+    </UsersProvider>
+    )
+
 }

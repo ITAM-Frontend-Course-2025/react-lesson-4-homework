@@ -1,0 +1,35 @@
+.section {
+  padding: clamp(20px, 3vw, 32px);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.08);
+}
+
+.title {
+  margin: 0 0 16px 0;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+}
+
+.list {
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed rgba(148, 163, 184, 0.6);
+}
+
+.row dt {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.row dd {
+  margin: 0;
+  color: #475569;
+}
