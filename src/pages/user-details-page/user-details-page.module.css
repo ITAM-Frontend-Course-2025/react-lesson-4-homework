@@ -37,9 +37,22 @@
   color: #475569;
 }
 
-.note {
-  margin: 0;
-  color: #64748b;
-  font-size: 0.9rem;
+.profileLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(99, 102, 241, 0.08);
+  color: #3730a3;
+  font-weight: 600;
+  transition: transform 0.2s, background 0.2s;
 }
+
+.profileLink:hover {
+  transform: translateY(-2px);
+  background: rgba(79, 70, 229, 0.15);
+}
+
+
 
