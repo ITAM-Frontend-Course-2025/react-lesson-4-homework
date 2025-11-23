@@ -1,6 +1,7 @@
-import { useParams } from 'react-router-dom'
+import { Outlet, useParams } from 'react-router-dom'
 import { getUserById } from '../../modules/users'
 import styles from './user-details-page.module.css'
+import { Link } from 'react-router-dom'
 
 export function UserDetailsPage() {
   const { userId } = useParams()
@@ -28,10 +29,10 @@ export function UserDetailsPage() {
           <dd>{user.favouriteModule}</dd>
         </div>
       </dl>
-      <p className={styles.note}>
-        Здесь могла бы быть расширенная карточка с прогрессом и задачами. Добавьте свою информацию, когда
-        будете развивать проект дальше.
-      </p>
+      <Link to="profile" className={styles.profileLink}>
+        Перейти в профиль
+      </Link>
+      <Outlet />
     </article>
   )
 }

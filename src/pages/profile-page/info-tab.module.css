@@ -1,0 +1,9 @@
+.info {
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.error {
+  color: red;
+}
